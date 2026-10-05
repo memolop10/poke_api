@@ -13,6 +13,10 @@ interface StatsChartProps {
   data: PokemonStatChartPoint[]
 }
 
+/**
+ * Gráfico de barras de las stats base. Usa las variables CSS del tema para que se
+ * adapte al modo claro y oscuro.
+ */
 export default function StatsChart({ data }: StatsChartProps) {
   if (!data || data.length === 0) {
     return <div className="stats-chart-empty">No hay estadísticas para mostrar.</div>

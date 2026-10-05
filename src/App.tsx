@@ -4,6 +4,7 @@ import Pokedex from './pages/Pokedex.tsx'
 import PokemonDetail from './pages/PokemonDetail'
 import './App.css'
 
+/** Define las rutas de la app: portada, Pokédex y detalle de cada Pokémon. */
 function App() {
   return (
     <BrowserRouter>

@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
 import type { PokemonCardProps } from '../types/ui'
 
+/**
+ * Tarjeta de la grilla que enlaza al detalle. `linkState` viaja en el estado de la
+ * navegación para que el detalle sepa a qué página y búsqueda volver.
+ */
 export default function PokemonCard({ name, image, types, linkState }: PokemonCardProps) {
   return (
     <Link to={`/pokedex/${name}`} state={linkState} className="pokemon-card">

@@ -1,3 +1,4 @@
+/** Props de `PokemonCard`. `linkState` es la página y búsqueda a restaurar al volver del detalle. */
 export interface PokemonCardProps {
   name: string
   image: string | null

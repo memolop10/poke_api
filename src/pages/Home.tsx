@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import logo30 from '../assets/pokemon_30th_anniversary-logo-brandlogos.net-l3h4s.png'
 
+/** Portada: el logo de Pokémon funciona como entrada a la Pokédex. */
 export default function Home() {
   return (
     <main className="home-center">

@@ -1,5 +1,10 @@
 import type { PaginationProps } from '../types/ui'
 
+/**
+ * Calcula qué botones mostrar en la paginación. Si hay pocas páginas, las muestra
+ * todas. Si no, muestra siempre la primera y la última, la actual con un vecino a
+ * cada lado, y `'ellipsis'` donde haya saltos. Ej. página 6 de 20: 1 … 5 6 7 … 20
+ */
 const buildPageItems = (currentPage: number, totalPages: number) => {
   const pageItems: (number | 'ellipsis')[] = []
   const siblingCount = 1
@@ -31,6 +36,7 @@ const buildPageItems = (currentPage: number, totalPages: number) => {
   return pageItems
 }
 
+/** Navegación entre páginas con botones Anterior/Siguiente. No se renderiza si hay una sola página. */
 export default function Pagination({ currentPage, totalItems, pageSize, onPageChange }: PaginationProps) {
   const totalPages = Math.max(1, Math.ceil(totalItems / pageSize))
   const pageItems = buildPageItems(currentPage, totalPages)

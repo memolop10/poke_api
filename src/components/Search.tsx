@@ -1,5 +1,6 @@
 import type { SearchProps } from '../types/ui'
 
+/** Input de búsqueda controlado. El debounce lo hace la página que lo usa, no este componente. */
 export default function Search({ value, onChange }: SearchProps) {
   return (
     <div className="search">
